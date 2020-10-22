@@ -1,0 +1,72 @@
+.home-style{
+ background-color: #F5F5F9;
+ height: 100vh;
+}
+
+.bg-color-header{
+  background-color: #FFFFFF;
+  box-shadow: 0px 3px 6px 1px #00000029;
+}
+
+.dropdwon{
+  background-color: aliceblue !important;
+
+}
+
+.food-type-component{
+  background-color: #FFFFFF;
+  box-shadow: 5px 5px 10px 1px #00000029;
+  border-radius: 40px;
+  height: 116px;
+  width: 76px;
+  display: inline-block;
+  /* border: 1px soild red; */
+  margin: 1em;
+  padding: 8px;
+}
+
+.foodtypes{
+  overflow: scroll;
+  height: 150px;
+  width:450px;
+}
+
+.divimg{
+  display: flex;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+}
+
+.food-img{
+  height: 32px;
+  width: 32px;
+  object-fit:cover;
+}
+
+.food-type-text{
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  color: #414B5C;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+ 
+.foodtypes{
+  overflow: initial;
+  height: 150px;
+  width:100%;
+}
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
