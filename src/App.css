@@ -2,7 +2,12 @@
  background-color: #F5F5F9;
  height: 100vh;
 }
+.restaurant-name{
+  white-space: nowrap;
+  display: inline;
+  padding-left: 1em;
 
+}
 .bg-color-header{
   background-color: #FFFFFF;
   box-shadow: 0px 3px 6px 1px #00000029;
@@ -20,8 +25,9 @@
   height: 116px;
   width: 76px;
   display: inline-block;
-  margin: 1em;
   padding: 8px;
+  margin: 1em;
+
 }
 
 .divimg{
@@ -50,26 +56,14 @@
   padding-top: 1em;
 }
 
-.active{
+.food-type-component.active{
   background-color: #3EA920 !important;
+  color:red !important;
 
 }
 
-@media (prefers-reduced-motion: no-preference) {
- 
 .foodtypes{
   height: 200px;
   overflow: auto;
   white-space: nowrap;
-}
-}
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
