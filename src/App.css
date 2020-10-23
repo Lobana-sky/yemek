@@ -24,12 +24,6 @@
   padding: 8px;
 }
 
-.foodtypes{
-  overflow: scroll;
-  height: 150px;
-  width:450px;
-}
-
 .divimg{
   display: flex;
   justify-content: center;
@@ -65,8 +59,10 @@
  
 .foodtypes{
   overflow: initial;
-  height: 150px;
-  width:100%;
+  height: 200px;
+  /* width:100%; */
+  overflow: auto;
+  white-space: nowrap;
 }
 }
 
