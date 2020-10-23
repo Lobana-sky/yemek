@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/yemek/static/css/main.847ca5f4.chunk.css",
+    "main.js": "/yemek/static/js/main.f931bb1b.chunk.js",
+    "main.js.map": "/yemek/static/js/main.f931bb1b.chunk.js.map",
+    "runtime-main.js": "/yemek/static/js/runtime-main.a31e20b4.js",
+    "runtime-main.js.map": "/yemek/static/js/runtime-main.a31e20b4.js.map",
+    "static/css/2.2a86faee.chunk.css": "/yemek/static/css/2.2a86faee.chunk.css",
+    "static/js/2.40e287a0.chunk.js": "/yemek/static/js/2.40e287a0.chunk.js",
+    "static/js/2.40e287a0.chunk.js.map": "/yemek/static/js/2.40e287a0.chunk.js.map",
+    "index.html": "/yemek/index.html",
+    "precache-manifest.d565864571231c9df6be1014caa870df.js": "/yemek/precache-manifest.d565864571231c9df6be1014caa870df.js",
+    "service-worker.js": "/yemek/service-worker.js",
+    "static/css/2.2a86faee.chunk.css.map": "/yemek/static/css/2.2a86faee.chunk.css.map",
+    "static/css/main.847ca5f4.chunk.css.map": "/yemek/static/css/main.847ca5f4.chunk.css.map",
+    "static/js/2.40e287a0.chunk.js.LICENSE.txt": "/yemek/static/js/2.40e287a0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a31e20b4.js",
+    "static/css/2.2a86faee.chunk.css",
+    "static/js/2.40e287a0.chunk.js",
+    "static/css/main.847ca5f4.chunk.css",
+    "static/js/main.f931bb1b.chunk.js"
+  ]
+}
