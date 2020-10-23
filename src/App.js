@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './brand-logo.png';
+// import logo from './brand-logo.png';
 import Home from './container/home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';

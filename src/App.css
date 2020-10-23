@@ -58,9 +58,7 @@
 @media (prefers-reduced-motion: no-preference) {
  
 .foodtypes{
-  overflow: initial;
   height: 200px;
-  /* width:100%; */
   overflow: auto;
   white-space: nowrap;
 }
