@@ -1,0 +1,8 @@
+{
+    "editor.suggest.showCustomcolors": false,
+    "workbench.colorCustomizations": {
+    
+    },
+    "workbench.colorTheme": "Solarized Light",
+    "workbench.preferredLightColorTheme": "Abyss"
+}

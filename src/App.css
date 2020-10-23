@@ -33,10 +33,13 @@
 
 .divimg{
   display: flex;
+  justify-content: center;
+  align-items: center;
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  /* border: 1px solid red; */
+  border: 1px solid #B2B2B2;
+  background-color: #F8F8F7;
 }
 
 .food-img{
@@ -50,6 +53,8 @@
   margin: 0;
   font-size: 10px;
   color: #414B5C;
+  text-align: center;
+  padding-top: 1em;
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -8,7 +8,7 @@ function foodtype() {
     <div className="food-type-component">
       <Container>
             <Row>
-                <Col>
+                <Col className="p-0">
                   <div className="divimg">
                    <Image className="food-img" src={logo} roundedCircle />
                   </div>
