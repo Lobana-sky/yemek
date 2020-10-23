@@ -3,6 +3,7 @@
     "workbench.colorCustomizations": {
     
     },
-    "workbench.colorTheme": "Solarized Light",
-    "workbench.preferredLightColorTheme": "Abyss"
+    "workbench.colorTheme": "Tomorrow Night Blue",
+    "workbench.preferredDarkColorTheme": "Kimbie Dark",
+    "workbench.preferredLightColorTheme": "Default High Contrast"
 }

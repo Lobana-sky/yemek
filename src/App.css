@@ -20,7 +20,6 @@
   height: 116px;
   width: 76px;
   display: inline-block;
-  /* border: 1px soild red; */
   margin: 1em;
   padding: 8px;
 }
@@ -55,6 +54,11 @@
   color: #414B5C;
   text-align: center;
   padding-top: 1em;
+}
+
+.active{
+  background-color: #3EA920 !important;
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
