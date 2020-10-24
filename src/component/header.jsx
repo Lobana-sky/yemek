@@ -10,7 +10,7 @@ function header() {
     <div className="bg-color-header">
         <Container>
             <Row>
-                <Col xm={6} className="m-1 d-flex justify-content-start align-items-center">
+                <Col xm={6} className="p-2 d-flex justify-content-start align-items-center">
                 <Image src={logo} rounded />
                 <p className="restaurant-name align-self-center d-flex mb-0">Restaurant Name</p>
                 </Col>
