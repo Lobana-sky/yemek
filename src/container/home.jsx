@@ -6,11 +6,11 @@ import fish from '../fish.svg';
 import '../App.css';
 
 
-// Add active class to the current (foodtypesElements)
+// Add active class to the current (food kinds)
 window.addEventListener('load', (event) => {
-var foodtypesElements = document.getElementsByClassName("food-type-component");
-for (var i = 0; i < foodtypesElements.length; i++) {
-  foodtypesElements[i].addEventListener("click", function(){
+var foodKinds = document.getElementsByClassName("food-type-component");
+for (var i = 0; i < foodKinds.length; i++) {
+  foodKinds[i].addEventListener("click", function(){
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
@@ -22,23 +22,23 @@ for (var i = 0; i < foodtypesElements.length; i++) {
 const type_food=[
   {
     image:fish,
-name:"food1"
+name:"fish"
 },
 {
   image:union,
-name:"food2"
+name:"union"
 },
 {
   image:fish,
-name:"food3"
+name:"fish"
 },
 {
   image:fish,
-name:"food4"
+name:"fish2"
 },
 {
   image:fish,
-name:"food5"
+name:"fish4"
 },
 ]
 //data
@@ -49,7 +49,7 @@ function home() {
       <Header></Header>
       <div id="foodtypes">
       {type_food.map((kind,i)=>
-      <a href="#" key={kind.name}><Foodtype key={kind.name} img={kind.image} name={kind.name} nclass={i === 0 ? "active":" "}/></a>)
+      <a href="www.ll.com" key={kind.name}><Foodtype key={kind.name} img={kind.image} name={kind.name} nclass={i === 0 ? "active":" "}/></a>)
       }
       </div>
     </div>
