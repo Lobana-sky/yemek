@@ -2,12 +2,14 @@
  background-color: #F5F5F9;
  height: 100vh;
 }
+
 .restaurant-name{
   white-space: nowrap;
   display: inline;
   padding-left: 1em;
 
 }
+
 .bg-color-header{
   background-color: #FFFFFF;
   box-shadow: 0px 3px 6px 1px #00000029;
@@ -59,7 +61,6 @@
 .food-type-component.active{
   background-color: #3EA920 !important;
   color:red !important;
-
 }
 
 #foodtypes{
@@ -67,6 +68,7 @@
   overflow: auto;
   white-space: nowrap;
 }
+
 /* override class in bootstrap */
 .dropdown-toggle{
   border:none !important;
