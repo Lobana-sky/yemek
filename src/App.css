@@ -67,3 +67,10 @@
   overflow: auto;
   white-space: nowrap;
 }
+/* override class in bootstrap */
+.dropdown-toggle{
+  border:none !important;
+  outline: none !important;
+  background-color: #fff !important;
+  color:#414B5C !important;
+}
