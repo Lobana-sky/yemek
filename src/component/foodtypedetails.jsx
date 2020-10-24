@@ -1,0 +1,19 @@
+import React from 'react';
+import {Image} from 'react-bootstrap';
+import '../App.css';
+
+function foodtype({img,name,nclass}) {
+  return (
+    <div className={`food-type-component ${nclass}`}>
+        <div className="p-0">
+          <div className="divimg">
+            <Image className="food-img" src={img}/>
+          </div>
+            <p className="food-type-text">{name}</p>
+            {console.log(nclass)}
+          </div>
+    </div>
+  );
+}
+
+export default foodtype;

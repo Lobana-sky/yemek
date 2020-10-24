@@ -8,9 +8,9 @@ import '../App.css';
 
 // Add active class to the current (food kinds)
 window.addEventListener('load', (event) => {
-var foodKinds = document.getElementsByClassName("food-type-component");
-for (var i = 0; i < foodKinds.length; i++) {
-  foodKinds[i].addEventListener("click", function(){
+var foodKind = document.getElementsByClassName("food-type-component");
+for (var i = 0; i < foodKind.length; i++) {
+  foodKind[i].addEventListener("click", function(){
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
@@ -49,7 +49,7 @@ function home() {
       <Header></Header>
       <div id="foodtypes">
       {type_food.map((kind,i)=>
-      <a href="www.ll.com" key={kind.name}><Foodtype key={kind.name} img={kind.image} name={kind.name} nclass={i === 0 ? "active":" "}/></a>)
+      <a href="#" key={kind.name}><Foodtype key={kind.name} img={kind.image} name={kind.name} nclass={i === 0 ? "active":" "}/></a>)
       }
       </div>
     </div>
