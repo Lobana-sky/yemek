@@ -6,48 +6,51 @@ import fish from '../fish.svg';
 import '../App.css';
 
 
-// Add active class to the current button (highlight it)
-var btns = document.getElementsByClassName("food-type-component");
-console.log(btns);
-// var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
+// Add active class to the current (foodtypesElements)
+window.addEventListener('load', (event) => {
+var foodtypesElements = document.getElementsByClassName("food-type-component");
+for (var i = 0; i < foodtypesElements.length; i++) {
+  foodtypesElements[i].addEventListener("click", function(){
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
 }
+});
 
-
-var type_food=[
+//data
+const type_food=[
   {
-image:union,
+    image:fish,
 name:"food1"
 },
 {
-image:fish,
+  image:union,
 name:"food2"
 },
 {
-image:fish,
+  image:fish,
 name:"food3"
 },
 {
-image:fish,
+  image:fish,
 name:"food4"
 },
 {
-image:union,
+  image:fish,
 name:"food5"
 },
 ]
+//data
 
 function home() {
   return (
     <div className="home-style">
       <Header></Header>
-      <div className="foodtypes">
-      {type_food.map((kind)=><a href="#"><Foodtype food={kind.image} name={kind.name}></Foodtype></a>)}
+      <div id="foodtypes">
+      {type_food.map((kind,i)=>
+      <a href="#" key={kind.name}><Foodtype key={kind.name} img={kind.image} name={kind.name} nclass={i === 0 ? "active":" "}/></a>)
+      }
       </div>
     </div>
   );
