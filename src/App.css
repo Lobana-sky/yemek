@@ -61,6 +61,7 @@
   height: 200px;
   overflow: auto;
   white-space: nowrap;
+  margin-left:11px;
 }
 
 .food-detail-img{

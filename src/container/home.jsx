@@ -98,7 +98,7 @@ function home() {
       <Container>
             <Row>
             {type_food_details.map((detail,i)=>
-              <Col key={i} xm={12} md={6} lg={4} className="p-2 d-flex justify-content-center">
+              <Col key={i} xm={12} md={6} xl={4} className="p-2 d-flex justify-content-center">
               <Fooddetail img={detail.image} name={detail.name} price={detail.price}/>
               </Col>
               )
