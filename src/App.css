@@ -71,7 +71,11 @@
 }
 
 .div-details{
+  position: relative;
+  top: -10px;
   padding: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
   background-color: #FFFFFF;
   box-shadow: 0px 10px 20px 1px #00000014;
   border-radius: 10px;

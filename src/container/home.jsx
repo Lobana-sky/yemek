@@ -63,6 +63,17 @@ name:"fish5",
 price:20
 },
 
+{
+  image:foodimg,
+name:"union",
+price:30
+},
+{
+  image:foodimg,
+name:"fish5",
+price:20
+},
+
 ]
 //data
 
@@ -86,8 +97,8 @@ function home() {
       {/* food type details */}
       <Container fluid>
             <Row>
-            {type_food_details.map((detail)=>
-              <Col key={detail.name} xm={12} md={6} lg={4} className="p-2 d-flex align-items-center">
+            {type_food_details.map((detail,i)=>
+              <Col key={i} xm={12} md={6} lg={4} className="p-2 d-flex align-items-center">
               <Fooddetail img={detail.image} name={detail.name} price={detail.price}/>
               </Col>
               )
