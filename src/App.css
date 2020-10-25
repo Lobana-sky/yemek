@@ -64,6 +64,43 @@
   white-space: nowrap;
 }
 
+.food-detail-img{
+  height: 60%;
+  width: 100%;
+  object-fit:cover;
+  border-radius: 8px;
+}
+
+.div-details{
+  padding: 1em;
+  background-color: #FFFFFF;
+  box-shadow: 0px 10px 20px 1px #00000014;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-detail-name{
+  font-weight: bold;
+  color:#414B5C;
+  font-size: 16px;
+  display: flex;
+  align-self: start;
+}
+
+.food-detail-price{
+  color:#414B5C;
+  font-size: 12px;
+  display: flex;
+
+}
+
+.sell-btn{
+  border: 1px solid #F9CB39;
+  background-color: #F9CB391A;
+  border-radius: 4px;
+}
+
 /* override class in bootstrap */
 .dropdown-toggle{
   border:none !important;

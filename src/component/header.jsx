@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../brand-logo.png';
+import logo from '../images/brand-logo.png';
 import {Row,Container,Col,Image} from 'react-bootstrap';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';

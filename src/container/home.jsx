@@ -1,8 +1,12 @@
 import React from 'react';
 import Header from '../component/header';
 import Foodtype from '../component/foodtype';
-import union from '../Union.svg';
-import fish from '../fish.svg';
+import union from '../images/Union.svg';
+import fish from '../images/fish.svg';
+import foodimg from '../images/food.jpg';
+import Fooddetail from '../component/foodtypedetails';
+import {Row,Container,Col} from 'react-bootstrap';
+
 import '../App.css';
 
 
@@ -40,18 +44,59 @@ name:"fish2"
   image:fish,
 name:"fish4"
 },
+];
+
+const type_food_details=[
+  {
+    image:foodimg,
+name:"fish",
+price:20
+},
+{
+  image:foodimg,
+name:"union",
+price:30
+},
+{
+  image:foodimg,
+name:"fish5",
+price:20
+},
+
 ]
 //data
 
 function home() {
   return (
     <div className="home-style">
-      <Header></Header>
+      {/* restaurant name + languages */}
+      <Header />
+      {/* restaurant name + languages */}  
+
+
+      {/* food typs  */}
       <div id="foodtypes">
       {type_food.map((kind,i)=>
-      <a href="#" key={kind.name}><Foodtype key={kind.name} img={kind.image} name={kind.name} nclass={i === 0 ? "active":" "}/></a>)
+      <a href="#" key={kind.name}><Foodtype img={kind.image} name={kind.name} nclass={i === 0 ? "active":""}/></a>)
       }
       </div>
+      {/* food typs  */}
+
+
+      {/* food type details */}
+      <Container fluid>
+            <Row>
+            {type_food_details.map((detail)=>
+              <Col key={detail.name} xm={12} md={6} lg={4} className="p-2 d-flex align-items-center">
+              <Fooddetail img={detail.image} name={detail.name} price={detail.price}/>
+              </Col>
+              )
+            }
+            </Row>
+        </Container>
+      {/* food type details */}
+
+
     </div>
   );
 }
