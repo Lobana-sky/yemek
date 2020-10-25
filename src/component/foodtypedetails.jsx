@@ -6,18 +6,15 @@ import '../App.css';
 
 function foodtypedetails({img,name,price}) {
   return (
-    <div className="">
+    <div className="d-flex justify-content-xs-center">
+      <div>
         <Image className="food-detail-img" src={img}/>
-          {/* <div className="divimg">
-            <Image className="food-img" src={img}/>
-          </div>
-            <p className="food-type-text">{name}</p> */}
         <div className="div-details">
-        <p className="food-detail-name align-self-start">{name}</p>
-        <p className="food-detail-price align-self-end">${price}</p>
-        <button className="sell-btn"><FontAwesomeIcon icon={faCoffee} /></button>
+          <p className="food-detail-name align-self-start">{name}</p>
+          <p className="food-detail-price align-self-end">${price}</p>
+          <button className="sell-btn"><FontAwesomeIcon icon={faCoffee} /></button>
         </div>
-       
+      </div>
     </div>
   );
 }

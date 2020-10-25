@@ -88,17 +88,17 @@ function home() {
       {/* food typs  */}
       <div id="foodtypes">
       {type_food.map((kind,i)=>
-      <a href="#" key={kind.name}><Foodtype img={kind.image} name={kind.name} nclass={i === 0 ? "active":""}/></a>)
+      <a href="#" key={i}><Foodtype img={kind.image} name={kind.name} nclass={i === 0 ? "active":""}/></a>)
       }
       </div>
       {/* food typs  */}
 
 
       {/* food type details */}
-      <Container fluid>
+      <Container>
             <Row>
             {type_food_details.map((detail,i)=>
-              <Col key={i} xm={12} md={6} lg={4} className="p-2 d-flex align-items-center">
+              <Col key={i} xm={12} md={6} lg={4} className="p-2 d-flex justify-content-center">
               <Fooddetail img={detail.image} name={detail.name} price={detail.price}/>
               </Col>
               )
