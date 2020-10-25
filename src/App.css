@@ -104,6 +104,21 @@
   border-radius: 4px;
 }
 
+.sell-btn-math{
+  border: 1px solid #D9D9D9;
+  background-color: #F9CB39;
+  border-radius: 4px;
+}
+.sell-btn-amount{
+  border: 1px solid #D9D9D9;
+  background-color: #EAEAEA;
+  border-radius: 4px;
+  margin-left: 3px;
+  margin-right: 3px;
+
+
+}
+
 /* override class in bootstrap */
 .dropdown-toggle{
   border:none !important;
