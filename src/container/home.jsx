@@ -77,7 +77,7 @@ price:20
 ]
 //data
 
-function home() {
+function Home() {
   return (
     <div className="home-style">
       {/* restaurant name + languages */}
@@ -112,5 +112,5 @@ function home() {
   );
 }
 
-export default home;
+export default Home;
 

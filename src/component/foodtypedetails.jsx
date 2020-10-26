@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import '../App.css';
 
-const [count, setCount] = useState(0);
 
 function showmath(e) {
 e.target.className="hidden";
@@ -12,7 +11,9 @@ e.target.parentElement.lastChild.className="d-block";
 }
 
 
-function foodtypedetails({img,name,price}) {
+function Foodtypedetails({img,name,price}) {
+const [count, setCount] = useState(0);
+
   return (
     <div className="d-flex justify-content-center">
       {/* to make it one block */}
@@ -43,4 +44,4 @@ function foodtypedetails({img,name,price}) {
   );
 }
 
-export default foodtypedetails;
+export default Foodtypedetails;

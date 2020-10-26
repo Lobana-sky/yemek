@@ -2,7 +2,7 @@ import React from 'react';
 import {Image} from 'react-bootstrap';
 import '../App.css';
 
-function foodtype({img,name,nclass}) {
+function Foodtype({img,name,nclass}) {
   return (
     <div className={`food-type-component ${nclass}`}>
         <div className="p-0">
@@ -15,4 +15,4 @@ function foodtype({img,name,nclass}) {
   );
 }
 
-export default foodtype;
+export default Foodtype;

@@ -5,7 +5,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 import '../App.css';
 
-function header() {
+function Header() {
   return (
     <div className="bg-color-header">
         <Container>
@@ -26,4 +26,4 @@ function header() {
   );
 }
 
-export default header;
+export default Header;
