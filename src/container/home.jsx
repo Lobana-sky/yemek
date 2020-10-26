@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../component/header';
 import Foodtype from '../component/foodtype';
+import Popup from '../component/popupfooddetail'
 import union from '../images/Union.svg';
 import fish from '../images/fish.svg';
 import foodimg from '../images/food.jpg';
@@ -21,6 +22,11 @@ for (var i = 0; i < foodKind.length; i++) {
   });
 }
 });
+
+// window.addEventListener('load', () => {
+// // console.log("yyy",document.getElementById("myfood"));
+  
+//   });
 
 //data
 const type_food=[
@@ -77,6 +83,11 @@ price:20
 ]
 //data
 
+function opendetails() {
+  // e.target.style.display = "block";
+  console.log("ll");
+}
+
 function Home() {
   return (
     <div className="home-style">
@@ -95,11 +106,15 @@ function Home() {
 
 
       {/* food type details */}
+      {/* <Popup /> */}
+
       <Container>
             <Row>
             {type_food_details.map((detail,i)=>
               <Col key={i} xm={12} md={6} xl={4} className="p-2 d-flex justify-content-center">
-              <Fooddetail img={detail.image} name={detail.name} price={detail.price}/>
+              {/* <a href="#" >  */}
+                <Fooddetail img={detail.image} name={detail.name} price={detail.price}/>
+              {/* </a> */}
               </Col>
               )
             }
@@ -107,6 +122,11 @@ function Home() {
         </Container>
       {/* food type details */}
 
+
+{/* test popup */}
+<div id="myfood" className="overlay">
+  <p>lara</p>
+</div>
 
     </div>
   );
