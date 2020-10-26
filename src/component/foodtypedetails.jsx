@@ -9,10 +9,22 @@ e.target.className="hidden";
 e.target.parentElement.lastChild.className="d-block";
 }
 
-function opendetails(){
+function opendetails(img){
   var parentNode=document.getElementById("myfood");
   parentNode.style.height="100%";
-  parentNode.innerHTML= "<div><a href='#' class='close-btn' onClick={document.getElementById('myfood').style.height='0%'}>&times;</a><div class='overlay-content'><a href='#'>About</a></div>";
+  parentNode.innerHTML= `<div><a href='#' class='close-btn' onClick={document.getElementById('myfood').style.height='0%'}>&times;</a>
+  <div class='overlay-content'>
+  <div class='container content'>
+  <div class='row'>
+  <div class='col-xs-12 col-md-6'>
+  <img src=${img} />
+  </div>
+  <div class='col-xs-12 col-md-6'>
+  One of three columns
+  </div>
+  </div>
+  </div>
+  </div>`;
 }
 
 function Foodtypedetails({img,name,price}) {
@@ -22,7 +34,8 @@ const [count, setCount] = useState(0);
     <div className="d-flex justify-content-center">
       {/* to make it one block */}
       <div>
-        <Image className="food-detail-img" src={img} onClick={(e)=>opendetails()}/> 
+        <Image className="food-detail-img" src={img} onClick={(e)=>opendetails(img)}/> 
+        {console.log(img)};
         {/* { e } call as a parameter in opendetails() function to make it correspond just for clicking this image */}
         <div className="div-details">
           <p className="food-detail-name align-self-start">{name}</p>
@@ -50,3 +63,5 @@ const [count, setCount] = useState(0);
 }
 
 export default Foodtypedetails;
+
+
