@@ -9,33 +9,42 @@ e.target.className="hidden";
 e.target.parentElement.lastChild.className="d-block";
 }
 
-function opendetails(img){
+function opendetails(img,name,tags,description){
   var parentNode=document.getElementById("myfood");
   parentNode.style.height="100%";
-  parentNode.innerHTML= `<div><a href='#' class='close-btn' onClick={document.getElementById('myfood').style.height='0%'}>&times;</a>
+  parentNode.innerHTML= `<div>
+  <a href='#' class='close-btn' 
+  onClick={document.getElementById('myfood').style.height='0%'}>&times;</a>
   <div class='overlay-content'>
-  <div class='container content'>
-  <div class='row'>
-  <div class='col-xs-12 col-md-6'>
-  <img src=${img} />
-  </div>
-  <div class='col-xs-12 col-md-6'>
-  One of three columns
-  </div>
-  </div>
-  </div>
+    <div class='container content'>
+      <div class='row'>
+        <div class='col-xs-12 col-md-6 p-0'>
+          <img src=${img} class='img-details'/>
+        </div>
+        <div class='col-xs-12 col-md-6'>
+          <p class='title-details'>${name}</p>
+          <div class='mb-3'>
+          <h6 class='text-left'>Ingredients</h6>
+          <span class='tag'>${tags}</span>
+          <span class='tag'>${tags}</span>
+          <span class='tag'>${tags}</span>
+          <span class='tag'>${tags}</span>
+          </div>
+          <p class='text-left m-1'>${description}</p>
+        </div>
+      </div>
+    </div>
   </div>`;
 }
 
-function Foodtypedetails({img,name,price}) {
+function Foodtypedetails({img,name,price,tags,description}) {
 const [count, setCount] = useState(0); 
 
   return (
     <div className="d-flex justify-content-center">
       {/* to make it one block */}
       <div>
-        <Image className="food-detail-img" src={img} onClick={(e)=>opendetails(img)}/> 
-        {console.log(img)};
+        <Image className="food-detail-img" src={img} onClick={(e)=>opendetails(img,name,tags,description)}/> 
         {/* { e } call as a parameter in opendetails() function to make it correspond just for clicking this image */}
         <div className="div-details">
           <p className="food-detail-name align-self-start">{name}</p>
