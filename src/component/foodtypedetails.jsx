@@ -1,18 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Image} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-
 import '../App.css';
 
+const [count, setCount] = useState(0);
 
 function showmath(e) {
 e.target.className="hidden";
-console.log(e.target.parentElement.lastChild.className="d-block");
-
-// console.log(e.target.parentElement.getElementById("showpart"));
-
+e.target.parentElement.lastChild.className="d-block";
 }
+
+
 function foodtypedetails({img,name,price}) {
   return (
     <div className="d-flex justify-content-center">
@@ -25,9 +24,17 @@ function foodtypedetails({img,name,price}) {
           <button className="sell-btn" onClick={(e)=>showmath(e)}><FontAwesomeIcon icon={faCoffee} /></button>
          <div id="showpart" className="d-none">
           <div className="d-flex">
-            <button className="sell-btn-math col"><FontAwesomeIcon icon={faCoffee} /></button>
-            <button className="sell-btn-amount col">1</button>
-            <button className="sell-btn-math col"><FontAwesomeIcon icon={faCoffee} /></button>
+            <button className="sell-btn-math col" 
+            onClick={() => setCount(count + 1)}
+            >
+              <FontAwesomeIcon icon={faCoffee} /></button>
+            <button className="sell-btn-amount col">
+              {count}
+              </button>
+            <button className="sell-btn-math col" 
+            onClick={() => setCount(count - 1)}
+            >
+              <FontAwesomeIcon icon={faCoffee} /></button>
           </div>
           </div>
         </div>
