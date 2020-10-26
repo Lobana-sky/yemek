@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {Image} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
@@ -33,7 +33,7 @@ const [count, setCount] = useState(0);
               {count}
               </button>
             <button className="sell-btn-math col" 
-            onClick={() => setCount(count - 1)}
+            onClick={() => count>0 ? setCount(count - 1): ""}
             >
               <FontAwesomeIcon icon={faCoffee} /></button>
           </div>
