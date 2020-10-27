@@ -12,9 +12,9 @@ e.target.parentElement.lastChild.className="d-block";
 function opendetails(img,name,tags,description){
   var parentNode=document.getElementById("myfood");
   parentNode.style.height="100%";
-  var create_detail= `<div>
-  <a href='#' class='close-btn' 
-  onClick={document.getElementById('myfood').style.height='0%'}>&times;</a>
+  var create_detail= `<div class="">
+  <a href='#' class='close-btn d-flex justify-content-center align-self-center' 
+  onClick={document.getElementById('myfood').style.height='0%'}><span style="line-height:1">&times;</span></a>
   <div class='overlay-content'>
     <div class='container content'>
       <div class='row'>

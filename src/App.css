@@ -221,6 +221,14 @@ body{
 
 }
 
+@media screen and (max-width:765px){
+  .img-details{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+  }
+}
+
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
   .overlay .close-btn {
