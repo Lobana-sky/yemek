@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../component/header';
 import Foodtype from '../component/foodtype';
-import Popup from '../component/popupfooddetail'
 import union from '../images/Union.svg';
 import fish from '../images/fish.svg';
 import foodimg from '../images/food.jpg';
@@ -23,10 +22,6 @@ for (var i = 0; i < foodKind.length; i++) {
 }
 });
 
-// window.addEventListener('load', () => {
-// // console.log("yyy",document.getElementById("myfood"));
-  
-//   });
 
 //data
 const type_food=[
@@ -93,11 +88,6 @@ description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam n
 ]
 //data
 
-function opendetails() {
-  // e.target.style.display = "block";
-  console.log("ll");
-}
-
 function Home() {
   return (
     <div className="home-style">
@@ -135,7 +125,6 @@ function Home() {
 
 {/* test popup */}
 <div id="myfood" className="overlay">
-  <p>lara</p>
 </div>
 
     </div>

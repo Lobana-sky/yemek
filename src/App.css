@@ -54,6 +54,11 @@
   background-color: #3EA920 !important;
 }
 
+.food-type-component.active .food-type-text,.food-type-component:hover .food-type-text{
+  color:#fff !important;
+
+}
+
 #foodtypes{
   height: 200px;
   overflow: auto;
@@ -93,6 +98,7 @@
   font-size: 12px;
   display: flex;
 }
+
 .hidden{
   display: none !important;
 }
@@ -108,8 +114,6 @@
   background-color: #F9CB39;
   border-radius: 4px;
 }
-
-
 
 .sell-btn-amount{
   border: 1px solid #D9D9D9;
