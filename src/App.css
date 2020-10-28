@@ -255,5 +255,6 @@ body{
   outline: none !important;
   padding:15px 30px;
   background-color:#25D366;
+  background: linear-gradient(90deg,  rgba(18, 140, 126, 1) 0%, rgba(37, 211, 102, 1) 100%);
   border: none !important;
 }
