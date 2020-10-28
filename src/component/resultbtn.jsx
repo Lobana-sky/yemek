@@ -7,7 +7,7 @@ import '../App.css';
 function ResultBtn({result}) {
   return (
     <div className="d-flex justify-content-center">
-      <button className="result-btn" onClick={console.log("lobana")}>
+      <button type="button" className="result-btn" onClick={console.log("lobana")}>
           <FontAwesomeIcon icon={faCoffee} />
           <span className="p-2 font-weight-bold">${result}</span>
       </button>
