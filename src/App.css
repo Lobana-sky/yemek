@@ -102,6 +102,7 @@ body{
   color:#414B5C;
   font-size: 16px;
   display: flex;
+  text-transform: capitalize;
 }
 
 .food-detail-price{
