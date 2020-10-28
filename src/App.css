@@ -3,9 +3,10 @@ body{
   font-family: 'Nunito', sans-serif !important;
 }
 
-.home-style{
+.home-style {
  background-color: #F5F5F9;
 }
+
 
 .restaurant-name{
   white-space: nowrap;
@@ -65,15 +66,20 @@ body{
 }
 
 #foodtypes{
-  height: 200px;
+  height: 150px;
   overflow: auto;
   white-space: nowrap;
   margin-left:11px;
+  padding-top: 14px;
+
+}
+.food-detail-div{
+  height: 300px;
 }
 
 .food-detail-img{
-  height: 179px;
-  width: 342px;
+  height: 60%;
+  width: 100%;
   object-fit:cover;
   border-radius: 8px;
 }
