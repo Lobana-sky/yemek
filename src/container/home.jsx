@@ -1,13 +1,13 @@
-import React from 'react';
+import React ,{useState} from 'react';
+import {Row,Container,Col} from 'react-bootstrap';
 import Header from '../component/header';
 import Foodtype from '../component/foodtype';
+import Footer from '../component/footer';
+import Fooddetail from '../component/foodtypedetails';
+import ResultBtn from '../component/resultbtn';
 import union from '../images/Union.svg';
 import fish from '../images/fish.svg';
 import foodimg from '../images/food.jpg';
-import Fooddetail from '../component/foodtypedetails';
-import ResultBtn from '../component/resultbtn';
-import {Row,Container,Col} from 'react-bootstrap';
-import Footer from '../component/footer';
 
 import '../App.css';
 
@@ -22,7 +22,10 @@ for (var i = 0; i < foodKind.length; i++) {
     this.className += " active";
   });
 }
+
 });
+
+
 
 
 //data
@@ -91,17 +94,31 @@ description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam n
 //data
 
 function Home() {
+  const [headInfo, setHeadInfo] = useState({});
+
+  // fetch data for header
+fetch('https://admin.yemix.net/ar/api/v1/restaurants/328e69ac91/')
+.then(response => response.json())
+.then((data) => {
+    {
+  setHeadInfo(data.data);
+}}
+);
+
   return (
+    
     <div className="home-style">
       {/* restaurant name + languages */}
-      <Header />
+      <Header logo={headInfo.logo} rname={headInfo.title} imgs={headInfo.locales}/>
       {/* restaurant name + languages */}  
 
 
       {/* food typs  */}
       <div id="foodtypes">
       {type_food.map((kind,i)=>
-      <a href="#/action-5" key={i}><Foodtype img={kind.image} name={kind.name} nclass={i === 0 ? "active":""}/></a>)
+      <a href="#/action-5" key={i}><Foodtype img={kind.image}
+       name={kind.name} nclass={i === 0 ? "active":""}/>
+      </a>)
       }
       </div>
       {/* food typs  */}
@@ -115,7 +132,8 @@ function Home() {
             {type_food_details.map((detail,i)=>
               <Col key={i} xm={12} md={6} lg={4} xl={3} className="p-2 d-flex justify-content-center">
               {/* <a href="#" >  */}
-                <Fooddetail img={detail.image} name={detail.name} price={detail.price} tags={detail.tag} description={detail.description}/>
+                <Fooddetail img={detail.image} name={detail.name} price={detail.price} 
+                tags={detail.tag} description={detail.description}/>
               {/* </a> */}
               </Col>
               )

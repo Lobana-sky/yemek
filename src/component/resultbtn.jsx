@@ -1,5 +1,4 @@
 import React from 'react';
-// import {Row,Container,Col,Image} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import '../App.css';

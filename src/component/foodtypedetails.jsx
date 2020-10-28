@@ -53,7 +53,8 @@ const [count, setCount] = useState(0);
     <div className="d-flex justify-content-center">
       {/* to make it one block */}
       <div className="food-detail-div">
-        <Image className="food-detail-img" src={img} onClick={(e)=>{opendetails(img,name,tags,description);console.log(e);}}/> 
+        <Image className="food-detail-img" src={img} 
+        onClick={(e)=>{opendetails(img,name,tags,description);console.log(e);}}/> 
         {/* { e } call as a parameter in opendetails() function to make it correspond just for clicking this image */}
         <div className="div-details">
           <p className="food-detail-name align-self-start">{name}</p>
