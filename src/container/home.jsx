@@ -5,6 +5,7 @@ import union from '../images/Union.svg';
 import fish from '../images/fish.svg';
 import foodimg from '../images/food.jpg';
 import Fooddetail from '../component/foodtypedetails';
+import ResultBtn from '../component/resultbtn';
 import {Row,Container,Col} from 'react-bootstrap';
 
 import '../App.css';
@@ -99,7 +100,7 @@ function Home() {
       {/* food typs  */}
       <div id="foodtypes">
       {type_food.map((kind,i)=>
-      <a href="#" key={i}><Foodtype img={kind.image} name={kind.name} nclass={i === 0 ? "active":""}/></a>)
+      <a href="#/action-5" key={i}><Foodtype img={kind.image} name={kind.name} nclass={i === 0 ? "active":""}/></a>)
       }
       </div>
       {/* food typs  */}
@@ -126,6 +127,8 @@ function Home() {
 {/* test popup */}
 {/* <div id="myfood" className="overlay">
 </div> */}
+
+<ResultBtn result="21"/>
 
     </div>
   );

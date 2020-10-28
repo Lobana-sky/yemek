@@ -245,3 +245,15 @@ body{
 }
 
 /* overlay layer */
+.result-btn{
+  color:#FFFFFF;
+  box-shadow: 0px 3px 6px 1px #00000029;
+  border-radius: 40px;
+  position: fixed;
+  bottom: 50px;
+  align-self: center;
+  outline: none !important;
+  padding:15px 30px;
+  background-color:#25D366;
+  border: none !important;
+}

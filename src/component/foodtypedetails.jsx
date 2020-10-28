@@ -17,6 +17,7 @@ function opendetails(img,name,tags,description){
 //  parentNode.style.height="0%";
 //  parentNode.style.transition="0.5s";
 // parentNode=document.getElementById("myfood");
+
   var create_detail= `<div>
   <a href='#' class='close-btn d-flex justify-content-center align-self-center' 
   onClick={getElementById('myfood').style.height='0%';document.body.removeChild(getElementById('myfood'));}><span style="line-height:1">&times;</span></a>
@@ -31,8 +32,7 @@ function opendetails(img,name,tags,description){
           <div class='mb-3'>
           <h6 class='text-left'>Ingredients</h6>`;
 
-          tags.map((tag)=> {
-            create_detail +=`<span class='tag'>${tag}</span>`;
+          tags.map((tag)=> { return create_detail +=`<span class='tag'>${tag}</span>`;
           })
 
           create_detail += `</div>
@@ -53,7 +53,7 @@ const [count, setCount] = useState(0);
     <div className="d-flex justify-content-center">
       {/* to make it one block */}
       <div className="food-detail-div">
-        <Image className="food-detail-img" src={img} onClick={(e)=>opendetails(img,name,tags,description)}/> 
+        <Image className="food-detail-img" src={img} onClick={(e)=>{opendetails(img,name,tags,description);console.log(e);}}/> 
         {/* { e } call as a parameter in opendetails() function to make it correspond just for clicking this image */}
         <div className="div-details">
           <p className="food-detail-name align-self-start">{name}</p>
