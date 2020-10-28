@@ -26,8 +26,6 @@ for (var i = 0; i < foodKind.length; i++) {
 });
 
 
-
-
 //data
 const type_food=[
   {
@@ -109,7 +107,10 @@ fetch('https://admin.yemix.net/ar/api/v1/restaurants/328e69ac91/')
     
     <div className="home-style">
       {/* restaurant name + languages */}
-      <Header logo={headInfo.logo} rname={headInfo.title} imgs={headInfo.locales}/>
+      <Header logo={headInfo.logo} rname={headInfo.title} 
+      // tr={headInfo.locales[2].flag} ar={headInfo.locales[0].flag}
+      // en={headInfo.locales[1].flag}
+      />
       {/* restaurant name + languages */}  
 
 
