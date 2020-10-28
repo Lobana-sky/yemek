@@ -257,4 +257,12 @@ body{
   background-color:#25D366;
   background: linear-gradient(90deg,  rgba(18, 140, 126, 1) 0%, rgba(37, 211, 102, 1) 100%);
   border: none !important;
+  z-index: 1;
+}
+
+.footer-img{
+  height:50px;
+  width: 100px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }

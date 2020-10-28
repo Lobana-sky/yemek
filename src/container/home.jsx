@@ -7,6 +7,7 @@ import foodimg from '../images/food.jpg';
 import Fooddetail from '../component/foodtypedetails';
 import ResultBtn from '../component/resultbtn';
 import {Row,Container,Col} from 'react-bootstrap';
+import Footer from '../component/footer';
 
 import '../App.css';
 
@@ -129,7 +130,7 @@ function Home() {
 </div> */}
 
 <ResultBtn result="21"/>
-
+<Footer />
     </div>
   );
 }
