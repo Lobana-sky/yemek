@@ -124,8 +124,8 @@ function Home() {
 
 
 {/* test popup */}
-<div id="myfood" className="overlay">
-</div>
+{/* <div id="myfood" className="overlay">
+</div> */}
 
     </div>
   );

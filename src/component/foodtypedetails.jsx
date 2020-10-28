@@ -10,11 +10,16 @@ e.target.parentElement.lastChild.className="d-block";
 }
 
 function opendetails(img,name,tags,description){
-  var parentNode=document.getElementById("myfood");
-  parentNode.style.height="100%";
-  var create_detail= `<div class="">
+ var parentNode = document.createElement('div');
+ parentNode.setAttribute("id", "myfood");
+ parentNode.className="overlay";
+ document.body.appendChild(parentNode);
+//  parentNode.style.height="0%";
+//  parentNode.style.transition="0.5s";
+// parentNode=document.getElementById("myfood");
+  var create_detail= `<div>
   <a href='#' class='close-btn d-flex justify-content-center align-self-center' 
-  onClick={document.getElementById('myfood').style.height='0%'}><span style="line-height:1">&times;</span></a>
+  onClick={getElementById('myfood').style.height='0%';document.body.removeChild(getElementById('myfood'));}><span style="line-height:1">&times;</span></a>
   <div class='overlay-content'>
     <div class='container content'>
       <div class='row'>
@@ -37,6 +42,8 @@ function opendetails(img,name,tags,description){
     </div>
   </div>`;
   parentNode.innerHTML=create_detail;
+  parentNode.style.height="100%";
+
 }
 
 function Foodtypedetails({img,name,price,tags,description}) {
