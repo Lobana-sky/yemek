@@ -10,20 +10,17 @@ import '../App.css';
 const Home=({headInfo,foodCategories}) => {
 
 const [categoriesInfo,setCategoriesInfo]=useState([]);
-const [dId,setDId]=useState(0);
+const [categoryId,setCategoryId]=useState(34);
 
 const getCategoriesInfo = async()=>{
   const response = 
-  await fetch(`https://admin.yemix.net/ar/api/v1/restaurants/5184d88585/categories/${34}/products`);
+  await fetch(`https://admin.yemix.net/ar/api/v1/restaurants/5184d88585/categories/${categoryId}/products`);
   const data = await response.json();
   setCategoriesInfo(data.data);
+  console.log(categoriesInfo);
 }
   
-useEffect(()=>{
-  getCategoriesInfo();
-},[dId]);
-// [] to run one time 
-// only when head Info is changed it will render again
+
 
   var foodKind = document.getElementsByClassName('food-type-component');
   for (var i = 0; i < foodKind.length; i++) {
@@ -35,10 +32,16 @@ useEffect(()=>{
       var ncurrent = document.getElementsByClassName("active");
       var idn=ncurrent[0].id;
       console.log(idn);
-      setDId(idn);
+      setCategoryId(idn);
     });
   }//end for
- 
+  console.log(categoryId);
+  useEffect(()=>{
+    getCategoriesInfo();
+  },[categoryId]);
+  // [] to run one time 
+// only when categoryId is changed it will render again
+
   return (
     <div className="home-style">
       {/* restaurant name + languages */}
