@@ -1,94 +1,44 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import {Row,Container,Col} from 'react-bootstrap';
 import Header from '../component/header';
 import Foodtype from '../component/foodtype';
 import Footer from '../component/footer';
 import Fooddetail from '../component/foodtypedetails';
 import ResultBtn from '../component/resultbtn';
-import foodimg from '../images/food.jpg';
-
 import '../App.css';
-
-
-// Add active class to the current (food kinds)
-window.addEventListener('load', (event) => {
-var foodKind = document.getElementsByClassName("food-type-component");
-for (var i = 0; i < foodKind.length; i++) {
-  foodKind[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-});
-
-
-//data
-// const type_food=[
-//   {
-//     image:fish,
-// name:"fish"
-// },
-// {
-//   image:union,
-// name:"union"
-// },
-// {
-//   image:fish,
-// name:"fish5"
-// },
-// {
-//   image:fish,
-// name:"fish2"
-// },
-// {
-//   image:fish,
-// name:"fish4"
-// },
-// ];
-
-const type_food_details=[
-  {
-  image:foodimg,
-  name:"fish",
-  price:20,
-  tag:["salad","vegetable","meat","fruits"],
-  description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet ",
-},
-{
-  image:foodimg,
-name:"union",
-price:30,
-tag:["salad","vegetable","meat"],
-description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet ",
-},
-{
-  image:foodimg,
-name:"fish5",
-price:20,
-tag:["salad","vegetable","fruits"],
-description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet ",
-},
-
-{
-  image:foodimg,
-name:"union",
-price:30,
-tag:["vegetable","meat","fruits"],
-description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet ",
-},
-{
-  image:foodimg,
-name:"fish5",
-price:20,
-tag:["salad","meat","fruits"],
-description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet ",
-},
-
-]
 
 const Home=({headInfo,foodCategories}) => {
 
+const [categoriesInfo,setCategoriesInfo]=useState([]);
+const [dId,setDId]=useState(0);
+
+const getCategoriesInfo = async()=>{
+  const response = 
+  await fetch(`https://admin.yemix.net/ar/api/v1/restaurants/5184d88585/categories/${34}/products`);
+  const data = await response.json();
+  setCategoriesInfo(data.data);
+}
+  
+useEffect(()=>{
+  getCategoriesInfo();
+},[dId]);
+// [] to run one time 
+// only when head Info is changed it will render again
+
+  var foodKind = document.getElementsByClassName('food-type-component');
+  for (var i = 0; i < foodKind.length; i++) {
+    foodKind[i].addEventListener("click", function(i){
+      i.preventDefault();
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+      var ncurrent = document.getElementsByClassName("active");
+      var idn=ncurrent[0].id;
+      console.log(idn);
+      setDId(idn);
+    });
+  }//end for
+ 
   return (
     <div className="home-style">
       {/* restaurant name + languages */}
@@ -100,36 +50,21 @@ const Home=({headInfo,foodCategories}) => {
       {/* food typs  */}
       <div id="foodtypes">
       {foodCategories!==undefined?foodCategories.map((kind,i)=>
-      <a href="#/action-5" key={i}><Foodtype img={kind.icon}
-       name={kind.title} nclass={i === 0 ? "active":""}/>
+      <a href="#/action-5" key={i}><Foodtype id1={i} id={kind.id} img={kind.icon}
+       name={kind.title} nclass={i===0?" active":""}/>
       </a>):""}
       </div>
-      {/* food typs  */}
-
-
-      {/* food type details */}
-      {/* <Popup /> */}
 
       <Container>
             <Row>
-            {type_food_details.map((detail,i)=>
+            {categoriesInfo!==undefined?categoriesInfo.map((detail,i)=>
               <Col key={i} xm={12} md={6} lg={4} xl={3} className="p-2 d-flex justify-content-center">
-              {/* <a href="#" >  */}
-                <Fooddetail img={detail.image} name={detail.name} price={detail.price} 
+                <Fooddetail img={detail.cover} name={detail.title} price={detail.price.raw} 
                 tags={detail.tag} description={detail.description}/>
-              {/* </a> */}
-              </Col>
-              )
-            }
+              </Col>):""}
             </Row>
         </Container>
       {/* food type details */}
-
-
-{/* test popup */}
-{/* <div id="myfood" className="overlay">
-</div> */}
-
 <ResultBtn result="21"/>
 <Footer />
     </div>
