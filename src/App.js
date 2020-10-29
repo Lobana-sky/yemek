@@ -7,8 +7,11 @@ import './App.css';
 
 function App() {
 const [headInfo,setHeadInfo]=useState({});
+const [foodCategories,setFoodCategories]=useState([]);
+
 useEffect(()=>{
   getHeadInfo();
+  getFoodInfo();
 },[]);
 // [] to run one time 
 // only when head Info is changed it will render again
@@ -18,9 +21,14 @@ const getHeadInfo = async()=>{
   setHeadInfo(data.data);
 }
 
+const getFoodInfo = async()=>{
+  const response = await fetch('https://admin.yemix.net/ar/api/v1/restaurants/5184d88585/categories?type=food-category');
+  const data = await response.json();
+  setFoodCategories(data.data);
+}
   return (
     <div className="home-style">
-      <Home headInfo={headInfo}/>
+      <Home headInfo={headInfo} foodCategories={foodCategories}/>
     </div>
   );
 }

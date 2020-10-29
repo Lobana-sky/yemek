@@ -5,8 +5,6 @@ import Foodtype from '../component/foodtype';
 import Footer from '../component/footer';
 import Fooddetail from '../component/foodtypedetails';
 import ResultBtn from '../component/resultbtn';
-import union from '../images/Union.svg';
-import fish from '../images/fish.svg';
 import foodimg from '../images/food.jpg';
 
 import '../App.css';
@@ -26,28 +24,28 @@ for (var i = 0; i < foodKind.length; i++) {
 
 
 //data
-const type_food=[
-  {
-    image:fish,
-name:"fish"
-},
-{
-  image:union,
-name:"union"
-},
-{
-  image:fish,
-name:"fish5"
-},
-{
-  image:fish,
-name:"fish2"
-},
-{
-  image:fish,
-name:"fish4"
-},
-];
+// const type_food=[
+//   {
+//     image:fish,
+// name:"fish"
+// },
+// {
+//   image:union,
+// name:"union"
+// },
+// {
+//   image:fish,
+// name:"fish5"
+// },
+// {
+//   image:fish,
+// name:"fish2"
+// },
+// {
+//   image:fish,
+// name:"fish4"
+// },
+// ];
 
 const type_food_details=[
   {
@@ -89,7 +87,7 @@ description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam n
 
 ]
 
-const Home=({headInfo}) => {
+const Home=({headInfo,foodCategories}) => {
 
   return (
     <div className="home-style">
@@ -101,11 +99,10 @@ const Home=({headInfo}) => {
       {/* restaurant name + languages */}  
       {/* food typs  */}
       <div id="foodtypes">
-      {type_food.map((kind,i)=>
-      <a href="#/action-5" key={i}><Foodtype img={kind.image}
-       name={kind.name} nclass={i === 0 ? "active":""}/>
-      </a>)
-      }
+      {foodCategories!==undefined?foodCategories.map((kind,i)=>
+      <a href="#/action-5" key={i}><Foodtype img={kind.icon}
+       name={kind.title} nclass={i === 0 ? "active":""}/>
+      </a>):""}
       </div>
       {/* food typs  */}
 

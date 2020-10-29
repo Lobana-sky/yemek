@@ -63,6 +63,8 @@ width: 51px;
   color: #414B5C;
   text-align: center;
   padding-top: 1em;
+  max-width: 60px;
+  overflow: hidden;
 }
 
 .food-type-component.active,.food-type-component:hover{
