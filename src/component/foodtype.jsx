@@ -2,7 +2,7 @@ import React from 'react';
 import {Image} from 'react-bootstrap';
 import '../App.css';
 
-function Foodtype({img,name,nclass}) {
+const Foodtype=({img,name,nclass})=> {
   return (
     <div className={`food-type-component ${nclass}`}>
         <div className="p-0">

@@ -46,7 +46,7 @@ function opendetails(img,name,tags,description){
 
 }
 
-function Foodtypedetails({img,name,price,tags,description}) {
+const Foodtypedetails=({img,name,price,tags,description})=> {
 const [count, setCount] = useState(0); 
 
   return (

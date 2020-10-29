@@ -1,4 +1,4 @@
-import React ,{useState} from 'react';
+import React from 'react';
 import {Row,Container,Col} from 'react-bootstrap';
 import Header from '../component/header';
 import Foodtype from '../component/foodtype';
@@ -22,7 +22,6 @@ for (var i = 0; i < foodKind.length; i++) {
     this.className += " active";
   });
 }
-
 });
 
 
@@ -89,31 +88,18 @@ description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam n
 },
 
 ]
-//data
 
-function Home() {
-  const [headInfo, setHeadInfo] = useState({});
-
-  // fetch data for header
-fetch('https://admin.yemix.net/ar/api/v1/restaurants/328e69ac91/')
-.then(response => response.json())
-.then((data) => {
-    {
-  setHeadInfo(data.data);
-}}
-);
+const Home=({headInfo}) => {
 
   return (
-    
     <div className="home-style">
       {/* restaurant name + languages */}
+      {console.log(headInfo)}
       <Header logo={headInfo.logo} rname={headInfo.title} 
-      // tr={headInfo.locales[2].flag} ar={headInfo.locales[0].flag}
-      // en={headInfo.locales[1].flag}
+      tr={headInfo.locales!==undefined?headInfo.locales[2].flag:""} ar={headInfo.locales!==undefined?headInfo.locales[0].flag:""}
+      en={headInfo.locales!==undefined?headInfo.locales[1].flag:""}
       />
       {/* restaurant name + languages */}  
-
-
       {/* food typs  */}
       <div id="foodtypes">
       {type_food.map((kind,i)=>

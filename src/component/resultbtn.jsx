@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import '../App.css';
 
-function ResultBtn({result}) {
+const ResultBtn=({result})=> {
   return (
     <div className="d-flex justify-content-center">
       <button type="button" className="result-btn" 

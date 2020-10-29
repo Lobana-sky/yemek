@@ -7,6 +7,10 @@ body{
  background-color: #F5F5F9;
 }
 
+.lang-img{
+  height: 20px;
+  width: 20px;
+}
 
 .restaurant-name{
   white-space: nowrap;
