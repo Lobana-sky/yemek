@@ -17,7 +17,6 @@ const getCategoriesInfo = async()=>{
   await fetch(`https://admin.yemix.net/ar/api/v1/restaurants/5184d88585/categories/${categoryId}/products`);
   const data = await response.json();
   setCategoriesInfo(data.data);
-  console.log(categoriesInfo);
 }
 
   var foodKind = document.getElementsByClassName('food-type-component');
@@ -29,11 +28,9 @@ const getCategoriesInfo = async()=>{
       this.className += " active";
       var ncurrent = document.getElementsByClassName("active");
       var idn=ncurrent[0].id;
-      console.log(idn);
       setCategoryId(idn);
     });
   }//end for
-  console.log(categoryId);
   useEffect(()=>{
     getCategoriesInfo();
   },[categoryId]);
@@ -59,7 +56,7 @@ const getCategoriesInfo = async()=>{
       <Container>
             <Row>
             {categoriesInfo!==undefined?categoriesInfo.map((detail,i)=>
-              <Col key={i} xm={12} md={6} lg={4} xl={3} className="p-2 d-flex justify-content-center">
+              <Col key={i} xm={12} sm={6} md={6} lg={4} xl={3} className="p-2 d-flex justify-content-center">
                 <Fooddetail img={detail.cover} name={detail.title} price={detail.price.raw} 
                 tags={detail.specs} description={detail.description.raw}/>
               </Col>):""}

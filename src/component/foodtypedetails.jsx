@@ -54,11 +54,11 @@ const [count, setCount] = useState(0);
       {/* to make it one block */}
       <div className="food-detail-div">
         <Image className="food-detail-img" src={img} 
-        onClick={(e)=>{opendetails(img,name,tags,description);console.log(e);}}/> 
+        onClick={(e)=>{opendetails(img,name,tags,description);}}/> 
         {/* { e } call as a parameter in opendetails() function to make it correspond just for clicking this image */}
         <div className="div-details">
           <p className="food-detail-name align-self-start">{name}</p>
-          <p className="food-detail-price align-self-end">${price}</p>
+          <p className="food-detail-price align-self-end"><span>tl</span>{price}</p>
           <button className="sell-btn" onClick={(e)=>showmath(e)}><FontAwesomeIcon icon={faCoffee} /></button>
          <div id="showpart" className="d-none">
           <div className="d-flex">
