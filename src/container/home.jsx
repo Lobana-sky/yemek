@@ -19,8 +19,6 @@ const getCategoriesInfo = async()=>{
   setCategoriesInfo(data.data);
   console.log(categoriesInfo);
 }
-  
-
 
   var foodKind = document.getElementsByClassName('food-type-component');
   for (var i = 0; i < foodKind.length; i++) {
@@ -53,7 +51,7 @@ const getCategoriesInfo = async()=>{
       {/* food typs  */}
       <div id="foodtypes">
       {foodCategories!==undefined?foodCategories.map((kind,i)=>
-      <a href="#/action-5" key={i}><Foodtype id1={i} id={kind.id} img={kind.icon}
+      <a href="#/action-5" key={i}><Foodtype id={kind.id} img={kind.icon}
        name={kind.title} nclass={i===0?" active":""}/>
       </a>):""}
       </div>
@@ -63,7 +61,7 @@ const getCategoriesInfo = async()=>{
             {categoriesInfo!==undefined?categoriesInfo.map((detail,i)=>
               <Col key={i} xm={12} md={6} lg={4} xl={3} className="p-2 d-flex justify-content-center">
                 <Fooddetail img={detail.cover} name={detail.title} price={detail.price.raw} 
-                tags={detail.tag} description={detail.description}/>
+                tags={detail.specs} description={detail.description.raw}/>
               </Col>):""}
             </Row>
         </Container>

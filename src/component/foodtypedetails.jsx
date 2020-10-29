@@ -32,7 +32,7 @@ function opendetails(img,name,tags,description){
           <div class='mb-3'>
           <h6 class='text-left'>Ingredients</h6>`;
 
-          tags.map((tag)=> { return create_detail +=`<span class='tag'>${tag}</span>`;
+          tags.map((tag)=> { return create_detail +=`<span class='tag'>${tag.text}</span>`;
           })
 
           create_detail += `</div>
