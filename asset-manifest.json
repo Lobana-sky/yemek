@@ -1,28 +1,26 @@
 {
   "files": {
-    "main.css": "/yemek/static/css/main.a7601d6c.chunk.css",
-    "main.js": "/yemek/static/js/main.575fb561.chunk.js",
-    "main.js.map": "/yemek/static/js/main.575fb561.chunk.js.map",
+    "main.css": "/yemek/static/css/main.2f2c07d8.chunk.css",
+    "main.js": "/yemek/static/js/main.6137c73e.chunk.js",
+    "main.js.map": "/yemek/static/js/main.6137c73e.chunk.js.map",
     "runtime-main.js": "/yemek/static/js/runtime-main.a31e20b4.js",
     "runtime-main.js.map": "/yemek/static/js/runtime-main.a31e20b4.js.map",
     "static/css/2.2a86faee.chunk.css": "/yemek/static/css/2.2a86faee.chunk.css",
-    "static/js/2.efc69351.chunk.js": "/yemek/static/js/2.efc69351.chunk.js",
-    "static/js/2.efc69351.chunk.js.map": "/yemek/static/js/2.efc69351.chunk.js.map",
+    "static/js/2.de12c85f.chunk.js": "/yemek/static/js/2.de12c85f.chunk.js",
+    "static/js/2.de12c85f.chunk.js.map": "/yemek/static/js/2.de12c85f.chunk.js.map",
     "index.html": "/yemek/index.html",
-    "precache-manifest.b5d6a0c208fac6580289b25441c018dd.js": "/yemek/precache-manifest.b5d6a0c208fac6580289b25441c018dd.js",
+    "precache-manifest.a90a9add7831cbacc31b76b5b6f2a39e.js": "/yemek/precache-manifest.a90a9add7831cbacc31b76b5b6f2a39e.js",
     "service-worker.js": "/yemek/service-worker.js",
     "static/css/2.2a86faee.chunk.css.map": "/yemek/static/css/2.2a86faee.chunk.css.map",
-    "static/css/main.a7601d6c.chunk.css.map": "/yemek/static/css/main.a7601d6c.chunk.css.map",
-    "static/js/2.efc69351.chunk.js.LICENSE.txt": "/yemek/static/js/2.efc69351.chunk.js.LICENSE.txt",
-    "static/media/Union.svg": "/yemek/static/media/Union.512a317c.svg",
-    "static/media/fish.svg": "/yemek/static/media/fish.6de43532.svg",
-    "static/media/food.jpg": "/yemek/static/media/food.70fcb281.jpg"
+    "static/css/main.2f2c07d8.chunk.css.map": "/yemek/static/css/main.2f2c07d8.chunk.css.map",
+    "static/js/2.de12c85f.chunk.js.LICENSE.txt": "/yemek/static/js/2.de12c85f.chunk.js.LICENSE.txt",
+    "static/media/fish.svg": "/yemek/static/media/fish.6de43532.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a31e20b4.js",
     "static/css/2.2a86faee.chunk.css",
-    "static/js/2.efc69351.chunk.js",
-    "static/css/main.a7601d6c.chunk.css",
-    "static/js/main.575fb561.chunk.js"
+    "static/js/2.de12c85f.chunk.js",
+    "static/css/main.2f2c07d8.chunk.css",
+    "static/js/main.6137c73e.chunk.js"
   ]
 }
