@@ -94,7 +94,6 @@ const Home=({headInfo}) => {
   return (
     <div className="home-style">
       {/* restaurant name + languages */}
-      {console.log(headInfo)}
       <Header logo={headInfo.logo} rname={headInfo.title} 
       tr={headInfo.locales!==undefined?headInfo.locales[2].flag:""} ar={headInfo.locales!==undefined?headInfo.locales[0].flag:""}
       en={headInfo.locales!==undefined?headInfo.locales[1].flag:""}

@@ -6,10 +6,7 @@ import './App.css';
 // var headInfo;
 
 function App() {
-
-
 const [headInfo,setHeadInfo]=useState({});
-
 useEffect(()=>{
   getHeadInfo();
 },[]);

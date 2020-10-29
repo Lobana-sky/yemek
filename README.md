@@ -2,6 +2,20 @@ CLI:
 
 * npx create-react-app yemek
 * npm install react-bootstrap bootstrap
+* npm i --save @fortawesome/fontawesome-svg-core
+* npm install --save @fortawesome/free-solid-svg-icons
+* npm install --save @fortawesome/react-fontawesome
+* npm install eslint-plugin-react-hooks --save-dev
+
+"eslintConfig": {
+    "plugins": [
+      "react-hooks"
+    ],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    }
+  },
 
 
 
