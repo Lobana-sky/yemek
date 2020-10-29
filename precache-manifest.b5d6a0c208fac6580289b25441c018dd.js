@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c24e0c7d82925e072376f27d43bdf1f8",
+    "revision": "de86d7d7ad07276a25325eb3c06f0604",
     "url": "/yemek/index.html"
   },
   {
-    "revision": "a613c2cfcfaa472f07de",
+    "revision": "d594f9e44a32412080f2",
     "url": "/yemek/static/css/2.2a86faee.chunk.css"
   },
   {
-    "revision": "c0051c9d7c4381e0892d",
-    "url": "/yemek/static/css/main.59fb89d2.chunk.css"
+    "revision": "7b384871f88794d46a1b",
+    "url": "/yemek/static/css/main.a7601d6c.chunk.css"
   },
   {
-    "revision": "a613c2cfcfaa472f07de",
-    "url": "/yemek/static/js/2.5915c01b.chunk.js"
+    "revision": "d594f9e44a32412080f2",
+    "url": "/yemek/static/js/2.efc69351.chunk.js"
   },
   {
     "revision": "56e936ba5c6b0f9670e5109948fa1531",
-    "url": "/yemek/static/js/2.5915c01b.chunk.js.LICENSE.txt"
+    "url": "/yemek/static/js/2.efc69351.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c0051c9d7c4381e0892d",
-    "url": "/yemek/static/js/main.0ae3e79b.chunk.js"
+    "revision": "7b384871f88794d46a1b",
+    "url": "/yemek/static/js/main.575fb561.chunk.js"
   },
   {
     "revision": "535d209aedecc21ef740",
