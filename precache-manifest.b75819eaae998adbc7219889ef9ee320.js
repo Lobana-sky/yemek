@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6b2d213611b9e2ce935d516ad467f478",
+    "revision": "773d924840359649fce64483938f1f63",
     "url": "/yemek/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yemek/static/css/2.2a86faee.chunk.css"
   },
   {
-    "revision": "fbff42c0832c73833307",
+    "revision": "52adca4bb245bc7cd654",
     "url": "/yemek/static/css/main.ec7484d6.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yemek/static/js/2.35a84eb7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fbff42c0832c73833307",
-    "url": "/yemek/static/js/main.6ac5348b.chunk.js"
+    "revision": "52adca4bb245bc7cd654",
+    "url": "/yemek/static/js/main.fa1c4739.chunk.js"
   },
   {
     "revision": "535d209aedecc21ef740",
