@@ -56,11 +56,14 @@ const [totalRes, setTotalRes] = useState(0);
       <div className="food-detail-div">
         <Image className="food-detail-img" src={img} 
         onClick={(e)=>{opendetails(img,name,tags,description);}}/> 
-        {/* { e } call as a parameter in opendetails() function to make it correspond just for clicking this image */}
+        {/* { e } call as a parameter in opendetails() function to make 
+        it correspond just for clicking this image */}
         <div className="div-details">
           <p className="food-detail-name align-self-start">{name}</p>
-          <p className="food-detail-price align-self-end"><span>tl</span>{price}</p>
-          <button className="sell-btn" onClick={(e)=>showmath(e)}><FontAwesomeIcon icon={faCoffee} /></button>
+          <p className="food-detail-price align-self-end">
+            {price}<span className="font-weight-bold"> &#8378;</span> </p>
+          <button className="sell-btn" onClick={(e)=>showmath(e)}>
+            <FontAwesomeIcon icon={faCoffee} /></button>
          <div id="showpart" className="d-none">
           <div className="d-flex">
             <button id="plus" className="sell-btn-math col"
@@ -73,8 +76,8 @@ const [totalRes, setTotalRes] = useState(0);
               </button>
 
             <button id="minus" className="sell-btn-math col"
-            // onClick={() => count>0 ? setCount(count - 1): "" }
-            onClick={() =>{setCount(count>0? count - 1 : 0); setTotalRes(count>0?totalRes - price:totalRes);result(totalRes)}}
+            onClick={() =>{setCount(count>0? count - 1 : 0);
+               setTotalRes(count>0?totalRes - price:totalRes);result(totalRes)}}
             >
               <FontAwesomeIcon icon={faCoffee} /></button>
           </div>

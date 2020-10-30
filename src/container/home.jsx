@@ -11,7 +11,6 @@ const Home=({headInfo,foodCategories}) => {
 
 const [categoriesInfo,setCategoriesInfo]=useState([]);
 const [categoryId,setCategoryId]=useState(34);
-const [result,setResult]=useState(0);
 const [total,setTotal]=useState(0);
 
 const getCategoriesInfo = async()=>{
@@ -20,7 +19,6 @@ const getCategoriesInfo = async()=>{
   const data = await response.json();
   setCategoriesInfo(data.data);
 }
-
 
   var foodKind = document.getElementsByClassName('food-type-component');
   for (var i = 0; i < foodKind.length; i++) {
@@ -40,16 +38,6 @@ const getCategoriesInfo = async()=>{
   // [] to run one time 
 // only when categoryId is changed it will render again
 
-var btnPlus = document.getElementById("plus");
-console.log(btnPlus);
-for (var j = 0; j <(btnPlus!==null?btnPlus.length:0); j++) {
-  btnPlus[j].addEventListener("click", function(){
-    console.log(this.value);
-    setResult(result+this.value);
-  });
-}//end for
-
-
   return (
     <div className="home-style">
       {/* restaurant name + languages */}
@@ -58,7 +46,7 @@ for (var j = 0; j <(btnPlus!==null?btnPlus.length:0); j++) {
       ar={headInfo.locales!==undefined?headInfo.locales[0].flag:""}
       en={headInfo.locales!==undefined?headInfo.locales[1].flag:""}
       />
-      {/* restaurant name + languages */}  
+
       {/* food typs  */}
       <div id="foodtypes">
       {foodCategories!==undefined?foodCategories.map((kind,i)=>
@@ -75,10 +63,9 @@ for (var j = 0; j <(btnPlus!==null?btnPlus.length:0); j++) {
               ):""}
             </Row>
         </Container>
-      <ResultBtn result={total}/>
 
-      {/* food type details */}
-    <Footer />
+      <ResultBtn result={total}/>
+      <Footer />
     </div>
   );
 }
