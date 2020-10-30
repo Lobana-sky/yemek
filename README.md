@@ -17,7 +17,11 @@ CLI:
     }
   },
 
+* npm install --save-dev @iconify/react @iconify/icons-fa
+import { Icon, InlineIcon } from '@iconify/react';
+import whatsappIcon from '@iconify/icons-fa/whatsapp';
 
+<Icon icon={whatsappIcon} />
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

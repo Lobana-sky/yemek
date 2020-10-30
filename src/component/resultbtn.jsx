@@ -1,6 +1,6 @@
 import React , {useState,useEffect} from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser ,faEnvelope, faKey} from '@fortawesome/free-solid-svg-icons';
+import { Icon, InlineIcon } from '@iconify/react';
+import whatsappIcon from '@iconify/icons-fa/whatsapp';
 
 import '../App.css';
 
@@ -12,11 +12,12 @@ const ResultBtn=({result})=> {
   return (
     <div className="d-flex justify-content-center">
       <button type="button" className="result-btn">
-          <FontAwesomeIcon icon={faEnvelope} />
-          <span className="p-2 font-weight-bold"> {result}</span>
+      <Icon icon={whatsappIcon} width="45px" height="45px" />
+      <span className="text-btn-result"> {result}.00 &#8378;</span>
       </button>
     </div>
   );
 }
+
 
 export default ResultBtn;

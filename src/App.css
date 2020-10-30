@@ -278,9 +278,18 @@ width: 51px;
   right: 35px;
   }
 }
-
+.text-btn-result{
+  font-size: 22px;
+  font-weight: bold;
+  padding:0.5em;
+}
 /* overlay layer */
 .result-btn{
+  display: flex;
+  justify-content: center;
+  /* justify-items: s; */
+  height: 76px;
+  width: 202px;
   color:#FFFFFF;
   box-shadow: 0px 3px 6px 1px #00000029;
   border-radius: 40px;
@@ -288,7 +297,7 @@ width: 51px;
   bottom: 50px;
   align-self: center;
   outline: none !important;
-  padding:15px 30px;
+  padding:15px;
   background-color:#25D366;
   background: linear-gradient(90deg,  rgba(18, 140, 126, 1) 0%, rgba(37, 211, 102, 1) 100%);
   border: none !important;
