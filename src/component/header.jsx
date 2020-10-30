@@ -16,9 +16,12 @@ const Header=({logo,rname,tr,en,ar}) =>{
                 <Col xm={6} className="p-2 d-flex justify-content-end">
                 <div className="dropdown-hidden d-block">
                 <DropdownButton id="dropdown-basic-button" title={<img className="lang-img" src={en} alt="en" />}>
-                    <Dropdown.Item href="#/action-1"><img className="lang-img" src={ar} alt="ar" />Arabic</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2"><img className="lang-img" src={tr} alt="tr"/>Turkish</Dropdown.Item>
-                </DropdownButton>  </div>
+                    <Dropdown.Item href="#/action-1">
+                      <img className="lang-img" src={ar} alt="ar" />Arabic</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">
+                      <img className="lang-img" src={tr} alt="tr"/>Turkish</Dropdown.Item>
+                </DropdownButton>  
+                </div>
                 <div className="lang-nav">
                 <button className="lang-btn col">
                 <img className="lang-img" src={ar} alt="ar" /><br></br>Arabic

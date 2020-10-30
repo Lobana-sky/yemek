@@ -38,7 +38,7 @@ const getCategoriesInfo = async()=>{
   // [] to run one time 
 // only when categoryId is changed it will render again
 
-  return (
+return (
     <div className="home-style">
       {/* restaurant name + languages */}
       <Header logo={headInfo.logo} rname={headInfo.title} 

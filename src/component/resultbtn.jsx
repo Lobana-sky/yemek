@@ -1,5 +1,5 @@
 import React , {useState,useEffect} from 'react';
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import whatsappIcon from '@iconify/icons-fa/whatsapp';
 
 import '../App.css';

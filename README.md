@@ -18,6 +18,12 @@ CLI:
   },
 
 * npm install --save-dev @iconify/react @iconify/icons-fa
+//////////////////////////////////////////////////
+* npm install react-icons --save
+* import { FaShoppingCart } from "react-icons/fa";
+* //<FaShoppingCart />//
+///////////////////////////////////////////////
+
 import { Icon, InlineIcon } from '@iconify/react';
 import whatsappIcon from '@iconify/icons-fa/whatsapp';
 

@@ -1,7 +1,9 @@
 import React, { useState} from 'react';
 import {Image,Col} from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { ImCart,ImMinus } from "react-icons/im";
+import { FaShoppingCart } from "react-icons/fa";
+
+
 import '../App.css';
 
 function showmath(e) {
@@ -63,13 +65,12 @@ const [totalRes, setTotalRes] = useState(0);
           <p className="food-detail-price align-self-end">
             {price}<span className="font-weight-bold"> &#8378;</span> </p>
           <button className="sell-btn" onClick={(e)=>showmath(e)}>
-            <FontAwesomeIcon icon={faCoffee} /></button>
+          <ImCart /></button>
          <div id="showpart" className="d-none">
           <div className="d-flex">
             <button id="plus" className="sell-btn-math col"
             onClick={() => {setCount(count + 1); setTotalRes(totalRes + price);result(totalRes)}}
-            >
-              <FontAwesomeIcon icon={faCoffee} /></button>
+            ><FaShoppingCart /></button>
 
             <button className="sell-btn-amount col">
               {count}
@@ -79,7 +80,7 @@ const [totalRes, setTotalRes] = useState(0);
             onClick={() =>{setCount(count>0? count - 1 : 0);
                setTotalRes(count>0?totalRes - price:totalRes);result(totalRes)}}
             >
-              <FontAwesomeIcon icon={faCoffee} /></button>
+              <ImMinus/></button>
           </div>
           </div>
         </div>
