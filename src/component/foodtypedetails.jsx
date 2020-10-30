@@ -1,13 +1,12 @@
 import React, { useState} from 'react';
 import {Image,Col} from 'react-bootstrap';
-import { ImCart,ImPlus,ImMinus } from "react-icons/im";
+import { ImPlus,ImMinus } from "react-icons/im";
 import { FaShoppingCart } from "react-icons/fa";
-
-
 import '../App.css';
 
 function showmath(e) {
-e.target.className="hidden";
+  // if(e!==)
+e.target.classList.add("hidden");
 e.target.parentElement.lastChild.className="d-block";
 }
 
