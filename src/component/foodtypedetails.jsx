@@ -42,7 +42,6 @@ function opendetails(img,name,tags,description){
   </div>`;
   parentNode.innerHTML=create_detail;
   parentNode.style.height="100%";
-
 }
 
 const Foodtypedetails=({img,name,price,tags,description,result})=> {
@@ -50,7 +49,6 @@ const [count, setCount] = useState(0);
 const [totalRes, setTotalRes] = useState(0);
 
   return (
-    <>
     <Col xm={12} sm={6} md={6} lg={4} xl={3} 
     className="p-2 d-flex justify-content-center">
     <div className="d-flex justify-content-center">
@@ -66,7 +64,7 @@ const [totalRes, setTotalRes] = useState(0);
          <div id="showpart" className="d-none">
           <div className="d-flex">
             <button id="plus" className="sell-btn-math col"
-            onClick={() => {setCount(count + 1);setTotalRes(totalRes+price);result(totalRes)}}
+            onClick={() => {setCount(count + 1); setTotalRes(totalRes + price);result(totalRes)}}
             >
               <FontAwesomeIcon icon={faCoffee} /></button>
 
@@ -76,7 +74,7 @@ const [totalRes, setTotalRes] = useState(0);
 
             <button id="minus" className="sell-btn-math col"
             // onClick={() => count>0 ? setCount(count - 1): "" }
-            onClick={() =>{setCount(count>0? count - 1:0);setTotalRes(totalRes-price);result(totalRes)}}
+            onClick={() =>{setCount(count>0? count - 1 : 0); setTotalRes(count>0?totalRes - price:totalRes);result(totalRes)}}
             >
               <FontAwesomeIcon icon={faCoffee} /></button>
           </div>
@@ -85,8 +83,6 @@ const [totalRes, setTotalRes] = useState(0);
       </div>
       </div>
       </Col>
-     </>
-
   );
 }
 
