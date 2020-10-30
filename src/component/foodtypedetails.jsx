@@ -5,7 +5,6 @@ import { FaShoppingCart } from "react-icons/fa";
 import '../App.css';
 
 function showmath(e) {
-  // if(e!==)
 e.target.classList.add("hidden");
 e.target.parentElement.lastChild.className="d-block";
 }
@@ -50,7 +49,7 @@ const [count, setCount] = useState(0);
 const [totalRes, setTotalRes] = useState(0);
 
   return (
-    <Col xm={12} sm={6} md={6} lg={4} xl={3} 
+    <Col xm={12} sm={8} md={6} lg={4} xl={3} 
     className="p-2 d-flex justify-content-center">
     <div className="d-flex justify-content-center">
       {/* to make it one block */}

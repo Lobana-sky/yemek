@@ -13,7 +13,7 @@ const [categoriesInfo,setCategoriesInfo]=useState([]);
 const [categoryId,setCategoryId]=useState(34);
 const [total,setTotal]=useState(0);
 
-const getCategoriesInfo = async()=>{
+const getCategoriesInfo = async(categoryId)=>{
   const response = 
   await fetch(`https://admin.yemix.net/ar/api/v1/restaurants/5184d88585/categories/${categoryId}/products`);
   const data = await response.json();
@@ -33,7 +33,7 @@ const getCategoriesInfo = async()=>{
   }//end for
 
   useEffect(()=>{
-    getCategoriesInfo();
+    getCategoriesInfo(categoryId);
   },[categoryId]);
   // [] to run one time 
 // only when categoryId is changed it will render again
