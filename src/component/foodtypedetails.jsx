@@ -5,7 +5,8 @@ import { FaShoppingCart } from "react-icons/fa";
 import '../App.css';
 
 function showmath(e) {
-e.target.classList.add("hidden");
+  e.target.className="hidden";
+// e.target.classList.add("hidden");
 e.target.parentElement.lastChild.className="d-block";
 }
 

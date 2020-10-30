@@ -41,7 +41,9 @@ const getCategoriesInfo = async(categoryId)=>{
 return (
     <div className="home-style">
       {/* restaurant name + languages */}
-      <Header logo={headInfo.logo} rname={headInfo.title} 
+      <Header 
+      logo={headInfo.logo} 
+      rname={headInfo.title} 
       tr={headInfo.locales!==undefined?headInfo.locales[2].flag:""} 
       ar={headInfo.locales!==undefined?headInfo.locales[0].flag:""}
       en={headInfo.locales!==undefined?headInfo.locales[1].flag:""}
@@ -50,21 +52,33 @@ return (
       {/* food typs  */}
       <div id="foodtypes">
       {foodCategories!==undefined?foodCategories.map((kind,i)=>
-      <a href="#/action-5" key={i}><Foodtype id={kind.id} img={kind.icon}
-       name={kind.title} nclass={i===0?" active":""}/>
+      <a href="#/action-5" key={i}>
+        <Foodtype 
+        id={kind.id} 
+        img={kind.icon}
+        name={kind.title} 
+        nclass={i===0?" active":""}/>
       </a>):""}
       </div>
 
        <Container>
             <Row>
             {categoriesInfo!==undefined?categoriesInfo.map((detail,i)=>
-                <Fooddetail key={i} img={detail.cover} name={detail.title} price={detail.price.raw} 
-                tags={detail.specs} description={detail.description.raw} result={total => setTotal(total)}/>
+                <Fooddetail 
+                key={i} 
+                img={detail.cover} 
+                name={detail.title} 
+                price={detail.price.raw} 
+                tags={detail.specs} 
+                description={detail.description.raw} 
+                result={total => setTotal(total+total)}/>
               ):""}
             </Row>
         </Container>
 
-      <ResultBtn result={total}/>
+      <ResultBtn 
+      result={total}
+      />
       <Footer />
     </div>
   );
