@@ -13,7 +13,7 @@ const ResultBtn=({result})=> {
     <div className="d-flex justify-content-center">
       <button type="button" className="result-btn">
       <Icon icon={whatsappIcon} width="45px" height="45px" />
-      <span className="text-btn-result"> {result}.00 &#8378;</span>
+      <span className="text-btn-result"> {result.toPrecision(4)} &#8378;</span>
       </button>
     </div>
   );
