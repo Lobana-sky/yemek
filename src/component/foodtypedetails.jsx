@@ -1,6 +1,6 @@
 import React, { useState} from 'react';
 import {Image,Col} from 'react-bootstrap';
-import { ImCart,ImMinus } from "react-icons/im";
+import { ImCart,ImPlus,ImMinus } from "react-icons/im";
 import { FaShoppingCart } from "react-icons/fa";
 
 
@@ -65,22 +65,23 @@ const [totalRes, setTotalRes] = useState(0);
           <p className="food-detail-price align-self-end">
             {price}<span className="font-weight-bold"> &#8378;</span> </p>
           <button className="sell-btn" onClick={(e)=>showmath(e)}>
-          <ImCart /></button>
+          <FaShoppingCart /></button>
          <div id="showpart" className="d-none">
           <div className="d-flex">
-            <button id="plus" className="sell-btn-math col"
-            onClick={() => {setCount(count + 1); setTotalRes(totalRes + price);result(totalRes)}}
-            ><FaShoppingCart /></button>
-
-            <button className="sell-btn-amount col">
-              {count}
-              </button>
-
+            
             <button id="minus" className="sell-btn-math col"
             onClick={() =>{setCount(count>0? count - 1 : 0);
-               setTotalRes(count>0?totalRes - price:totalRes);result(totalRes)}}
-            >
-              <ImMinus/></button>
+               setTotalRes(count>0?totalRes - price:totalRes);result(totalRes)}}> 
+            <ImMinus/></button>
+
+            <button className="sell-btn-amount col">
+            {count}
+            </button>
+
+            <button id="plus" className="sell-btn-math col"
+            onClick={() => {setCount(count + 1); setTotalRes(totalRes + price);result(totalRes)}}> 
+            <ImPlus /></button>
+
           </div>
           </div>
         </div>
