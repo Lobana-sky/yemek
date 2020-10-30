@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import {Image} from 'react-bootstrap';
+import {Image,Col} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import '../App.css';
@@ -16,7 +16,6 @@ function opendetails(img,name,tags,description){
  document.body.appendChild(parentNode);
 //  parentNode.style.height="0%";
 //  parentNode.style.transition="0.5s";
-// parentNode=document.getElementById("myfood");
 
   var create_detail= `<div>
   <a href='#' class='close-btn d-flex justify-content-center align-self-center' 
@@ -46,10 +45,14 @@ function opendetails(img,name,tags,description){
 
 }
 
-const Foodtypedetails=({img,name,price,tags,description})=> {
+const Foodtypedetails=({img,name,price,tags,description,result})=> {
 const [count, setCount] = useState(0); 
+const [totalRes, setTotalRes] = useState(0);
 
   return (
+    <>
+    <Col xm={12} sm={6} md={6} lg={4} xl={3} 
+    className="p-2 d-flex justify-content-center">
     <div className="d-flex justify-content-center">
       {/* to make it one block */}
       <div className="food-detail-div">
@@ -62,22 +65,28 @@ const [count, setCount] = useState(0);
           <button className="sell-btn" onClick={(e)=>showmath(e)}><FontAwesomeIcon icon={faCoffee} /></button>
          <div id="showpart" className="d-none">
           <div className="d-flex">
-            <button className="sell-btn-math col" 
-            onClick={() => setCount(count + 1)}
+            <button id="plus" className="sell-btn-math col"
+            onClick={() => {setCount(count + 1);setTotalRes(totalRes+price);result(totalRes)}}
             >
               <FontAwesomeIcon icon={faCoffee} /></button>
+
             <button className="sell-btn-amount col">
               {count}
               </button>
-            <button className="sell-btn-math col" 
-            onClick={() => count>0 ? setCount(count - 1): ""}
+
+            <button id="minus" className="sell-btn-math col"
+            // onClick={() => count>0 ? setCount(count - 1): "" }
+            onClick={() =>{setCount(count>0? count - 1:0);setTotalRes(totalRes-price);result(totalRes)}}
             >
               <FontAwesomeIcon icon={faCoffee} /></button>
           </div>
           </div>
         </div>
       </div>
-    </div>
+      </div>
+      </Col>
+     </>
+
   );
 }
 

@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import {Row,Container,Col} from 'react-bootstrap';
+import {Row,Container} from 'react-bootstrap';
 import Header from '../component/header';
 import Foodtype from '../component/foodtype';
 import Footer from '../component/footer';
@@ -11,6 +11,8 @@ const Home=({headInfo,foodCategories}) => {
 
 const [categoriesInfo,setCategoriesInfo]=useState([]);
 const [categoryId,setCategoryId]=useState(34);
+const [result,setResult]=useState(0);
+const [total,setTotal]=useState(0);
 
 const getCategoriesInfo = async()=>{
   const response = 
@@ -19,10 +21,10 @@ const getCategoriesInfo = async()=>{
   setCategoriesInfo(data.data);
 }
 
+
   var foodKind = document.getElementsByClassName('food-type-component');
   for (var i = 0; i < foodKind.length; i++) {
-    foodKind[i].addEventListener("click", function(i){
-      i.preventDefault();
+    foodKind[i].addEventListener("click", function(){
       var current = document.getElementsByClassName("active");
       current[0].className = current[0].className.replace(" active", "");
       this.className += " active";
@@ -31,17 +33,29 @@ const getCategoriesInfo = async()=>{
       setCategoryId(idn);
     });
   }//end for
+
   useEffect(()=>{
     getCategoriesInfo();
   },[categoryId]);
   // [] to run one time 
 // only when categoryId is changed it will render again
 
+var btnPlus = document.getElementById("plus");
+console.log(btnPlus);
+for (var j = 0; j <(btnPlus!==null?btnPlus.length:0); j++) {
+  btnPlus[j].addEventListener("click", function(){
+    console.log(this.value);
+    setResult(result+this.value);
+  });
+}//end for
+
+
   return (
     <div className="home-style">
       {/* restaurant name + languages */}
       <Header logo={headInfo.logo} rname={headInfo.title} 
-      tr={headInfo.locales!==undefined?headInfo.locales[2].flag:""} ar={headInfo.locales!==undefined?headInfo.locales[0].flag:""}
+      tr={headInfo.locales!==undefined?headInfo.locales[2].flag:""} 
+      ar={headInfo.locales!==undefined?headInfo.locales[0].flag:""}
       en={headInfo.locales!==undefined?headInfo.locales[1].flag:""}
       />
       {/* restaurant name + languages */}  
@@ -53,18 +67,18 @@ const getCategoriesInfo = async()=>{
       </a>):""}
       </div>
 
-      <Container>
+       <Container>
             <Row>
             {categoriesInfo!==undefined?categoriesInfo.map((detail,i)=>
-              <Col key={i} xm={12} sm={6} md={6} lg={4} xl={3} className="p-2 d-flex justify-content-center">
-                <Fooddetail img={detail.cover} name={detail.title} price={detail.price.raw} 
-                tags={detail.specs} description={detail.description.raw}/>
-              </Col>):""}
+                <Fooddetail key={i} img={detail.cover} name={detail.title} price={detail.price.raw} 
+                tags={detail.specs} description={detail.description.raw} result={total => setTotal(total)}/>
+              ):""}
             </Row>
         </Container>
+      <ResultBtn result={total}/>
+
       {/* food type details */}
-<ResultBtn result="21"/>
-<Footer />
+    <Footer />
     </div>
   );
 }
