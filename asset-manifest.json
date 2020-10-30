@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/yemek/static/css/main.ec7484d6.chunk.css",
-    "main.js": "/yemek/static/js/main.8f94db26.chunk.js",
-    "main.js.map": "/yemek/static/js/main.8f94db26.chunk.js.map",
+    "main.js": "/yemek/static/js/main.6ac5348b.chunk.js",
+    "main.js.map": "/yemek/static/js/main.6ac5348b.chunk.js.map",
     "runtime-main.js": "/yemek/static/js/runtime-main.a31e20b4.js",
     "runtime-main.js.map": "/yemek/static/js/runtime-main.a31e20b4.js.map",
     "static/css/2.2a86faee.chunk.css": "/yemek/static/css/2.2a86faee.chunk.css",
-    "static/js/2.9f0a7c3f.chunk.js": "/yemek/static/js/2.9f0a7c3f.chunk.js",
-    "static/js/2.9f0a7c3f.chunk.js.map": "/yemek/static/js/2.9f0a7c3f.chunk.js.map",
+    "static/js/2.35a84eb7.chunk.js": "/yemek/static/js/2.35a84eb7.chunk.js",
+    "static/js/2.35a84eb7.chunk.js.map": "/yemek/static/js/2.35a84eb7.chunk.js.map",
     "index.html": "/yemek/index.html",
-    "precache-manifest.4fd012bdd392722fe818747eaa34fe2b.js": "/yemek/precache-manifest.4fd012bdd392722fe818747eaa34fe2b.js",
+    "precache-manifest.d7d2961a2b0dd4c3a591779476da0bc2.js": "/yemek/precache-manifest.d7d2961a2b0dd4c3a591779476da0bc2.js",
     "service-worker.js": "/yemek/service-worker.js",
     "static/css/2.2a86faee.chunk.css.map": "/yemek/static/css/2.2a86faee.chunk.css.map",
     "static/css/main.ec7484d6.chunk.css.map": "/yemek/static/css/main.ec7484d6.chunk.css.map",
-    "static/js/2.9f0a7c3f.chunk.js.LICENSE.txt": "/yemek/static/js/2.9f0a7c3f.chunk.js.LICENSE.txt",
+    "static/js/2.35a84eb7.chunk.js.LICENSE.txt": "/yemek/static/js/2.35a84eb7.chunk.js.LICENSE.txt",
     "static/media/fish.svg": "/yemek/static/media/fish.6de43532.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a31e20b4.js",
     "static/css/2.2a86faee.chunk.css",
-    "static/js/2.9f0a7c3f.chunk.js",
+    "static/js/2.35a84eb7.chunk.js",
     "static/css/main.ec7484d6.chunk.css",
-    "static/js/main.8f94db26.chunk.js"
+    "static/js/main.6ac5348b.chunk.js"
   ]
 }
