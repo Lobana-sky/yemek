@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/yemek/static/css/main.ec7484d6.chunk.css",
-    "main.js": "/yemek/static/js/main.fa1c4739.chunk.js",
-    "main.js.map": "/yemek/static/js/main.fa1c4739.chunk.js.map",
+    "main.js": "/yemek/static/js/main.cea322ac.chunk.js",
+    "main.js.map": "/yemek/static/js/main.cea322ac.chunk.js.map",
     "runtime-main.js": "/yemek/static/js/runtime-main.a31e20b4.js",
     "runtime-main.js.map": "/yemek/static/js/runtime-main.a31e20b4.js.map",
     "static/css/2.2a86faee.chunk.css": "/yemek/static/css/2.2a86faee.chunk.css",
     "static/js/2.35a84eb7.chunk.js": "/yemek/static/js/2.35a84eb7.chunk.js",
     "static/js/2.35a84eb7.chunk.js.map": "/yemek/static/js/2.35a84eb7.chunk.js.map",
     "index.html": "/yemek/index.html",
-    "precache-manifest.b75819eaae998adbc7219889ef9ee320.js": "/yemek/precache-manifest.b75819eaae998adbc7219889ef9ee320.js",
+    "precache-manifest.05c852fe30f76deb445c902b7a094333.js": "/yemek/precache-manifest.05c852fe30f76deb445c902b7a094333.js",
     "service-worker.js": "/yemek/service-worker.js",
     "static/css/2.2a86faee.chunk.css.map": "/yemek/static/css/2.2a86faee.chunk.css.map",
     "static/css/main.ec7484d6.chunk.css.map": "/yemek/static/css/main.ec7484d6.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.2a86faee.chunk.css",
     "static/js/2.35a84eb7.chunk.js",
     "static/css/main.ec7484d6.chunk.css",
-    "static/js/main.fa1c4739.chunk.js"
+    "static/js/main.cea322ac.chunk.js"
   ]
 }
