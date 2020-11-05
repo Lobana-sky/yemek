@@ -44,7 +44,7 @@ return (
       <Header 
       logo={headInfo.logo} 
       rname={headInfo.title} 
-      tr={headInfo.locales!==undefined?headInfo.locales[2].flag:""} 
+      tr={headInfo.locales!==undefined?headInfo.locales[1].flag:""} 
       ar={headInfo.locales!==undefined?headInfo.locales[0].flag:""}
       en={headInfo.locales!==undefined?headInfo.locales[1].flag:""}
       />

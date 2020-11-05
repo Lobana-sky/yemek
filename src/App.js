@@ -13,14 +13,17 @@ useEffect(()=>{
 },[]);
 // [] to run one time 
 // only when head Info is changed it will render again
+let Basic_Url="https://admin.yemix.net/";
+let Languages_option="en";
+let Restaurant_Id="5184d88585"
 const getHeadInfo = async()=>{
-  const response = await fetch('https://admin.yemix.net/ar/api/v1/restaurants/328e69ac91/');
+  const response = await fetch(`${Basic_Url}${Languages_option}/api/v1/restaurants/${Restaurant_Id}/`);
   const data = await response.json();
   setHeadInfo(data.data);
 }
 
 const getFoodInfo = async()=>{
-  const response = await fetch('https://admin.yemix.net/ar/api/v1/restaurants/5184d88585/categories?type=food-category');
+  const response = await fetch(`${Basic_Url}${Languages_option}/api/v1/restaurants/${Restaurant_Id}/categories?type=food-category`);
   const data = await response.json();
   setFoodCategories(data.data);
 }
